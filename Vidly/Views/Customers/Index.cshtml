@@ -1,4 +1,4 @@
-﻿@model Vidly.ViewModels.RandomMovieViewModel
+﻿@model Vidly.ViewModels.Customer
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,6 +6,7 @@
 <ul>
     @foreach (var customer in Model.Customers)
     {
+        //FIX iteration with Customer model instead of viewModel.
         @*<li>@Html.ActionLink(@customer.Name, "Details", "Customers", @customer.id)</li>*@
         <a href="details/@customer.id">@customer.Name</a>
     }
